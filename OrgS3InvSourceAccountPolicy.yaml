@@ -22,7 +22,7 @@ Resources:
         - Effect: Allow
           Principal:
             AWS:
-              Fn::Sub: arn:aws:iam::${DestinationAccountId}:user/${S3InventoryUser}
+              Fn::Sub: arn:aws:iam::${DestinationAccountId}:role/${S3InventoryUser}
           Action: sts:AssumeRole
       Path: "/"
       RoleName: OrgS3role
